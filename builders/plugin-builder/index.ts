@@ -9,6 +9,7 @@ import { Observable } from 'rxjs';
 import { BuilderConfiguration, BuildEvent } from '@angular-devkit/architect';
 import { tap } from 'rxjs/operators';
 
+
 interface PluginBuilderSchema extends NormalizedBrowserBuilderSchema {
   /**
    * A string of the form `path/to/file#exportName` that acts as a path to include to bundle
@@ -25,6 +26,8 @@ interface PluginBuilderSchema extends NormalizedBrowserBuilderSchema {
    */
   sharedLibs: string;
 }
+
+
 export default class PluginBuilder extends BrowserBuilder {
   private options: PluginBuilderSchema;
 
